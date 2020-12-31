@@ -1,11 +1,7 @@
-GRUB2 Live ISO Multiboot
-========================
+# GRUB2 Live ISO Multiboot
+based on [glim](https://github.com/thias/glim)
 
-https://github.com/thias/glim | http://glee.thias.es/GLIM
-
-
-Overview
---------
+## Overview
 
 GLIM is a set of grub configuration files to turn a simple VFAT formatted USB
 memory stick with many GNU/Linux distribution ISO images into a neat device
@@ -29,51 +25,53 @@ and even NTFS, but the boot of the distributions must also support it, which
 isn't the case for many with NTFS, for instance. So FAT32 stays the safe bet.
 
 
-Screenshots
------------
+## Screenshots
 
 ![Main Menu](https://github.com/thias/glim/raw/master/screenshots/GLIM-3.0-shot1.png)
 ![Ubuntu Submenu](https://github.com/thias/glim/raw/master/screenshots/GLIM-3.0-shot2.png)
 
 
-Installation
-------------
+## Installation
 
 Once you have your USB memory with a single partition formatted as FAT32 with
 the filesystem label 'GLIM', just run (as a normal user) :
 
-    ./glim.sh
+```sh
+./glim.sh
+```
 
 Once finished, you may change the filesystem label to anything you like.
 
 The supported `boot/iso/` sub-directories (in alphabetical order) are :
 
-    antergos
-    antix
-    arch
-    bodhi
-    centos
-    clonezilla
-    debian
-    elementary
-    fedora
-    gparted
-    grml
-    ipxe
-    kali
-    linuxmint
-    manjaro
-    netrunner
-    peppermint
-    porteus
-    rhel
-    sabayon
-    supergrub2disk
-    sysrescd
-    tails
-    ubuntu
-    void
-    xubuntu
+```
+antergos
+antix
+arch
+bodhi
+centos
+clonezilla
+debian
+elementary
+fedora
+gparted
+grml
+ipxe
+kali
+linuxmint
+manjaro
+netrunner
+peppermint
+porteus
+rhel
+sabayon
+supergrub2disk
+sysrescd
+tails
+ubuntu
+void
+xubuntu
+```
 
 Any missing sub-directory will have the matching boot menu entry automatically
 disabled, so to skip any distribution, just don't create the directory.
@@ -85,8 +83,7 @@ different versions, or just part of a distribution, edit the appropriate
 Note that on 32bit computers, all 64bit entries will be automatically hidden.
 
 
-Special Cases
--------------
+## Special Cases
 
 ### LibreELEC
 
@@ -98,8 +95,7 @@ Live booting is also supported, and the first launch will create a 512MB file
 as /STORAGE.
 
 
-Testing
--------
+## Testing
 
 With KVM it should "just work". The `/dev/sdx` device should be configured as
 an IDE or SATA disk (for some reason, as USB disk didn't work for me on Fedora
@@ -108,29 +104,13 @@ Make sure you unmount the disk from the host OS before you start the KVM
 virtual machine that uses it.
 
 
-Troubleshooting
----------------
+## Troubleshooting
 
 If you have any problem to boot, for instance stuck at the GRUB prompt before
 the menu, try re-installing.
 If you have other exotic GRUB errors, such as garbage text read instead of the
 configuration directives, try re-formatting your USB memory from scratch.
 I've seen weird things happen...
-
-
-Contributing
-------------
-
-If you find GLIM useful but the configuration of the OS you require is missing
-or simply outdated, please feel free to contribute! What you will need is
-create a GitHub pull request which includes :
- * All changes properly and fully tested.
- * New entries added similarly to the existing ones :
-   * In alphabetical order.
-   * With all possible relevant variants (i.e. not just the one spin you want).
- * An original icon of high quality, and a shrunk 24x24 px version.
- * An updated supported directories list in this README file.
-
 
 ---
 Copyleft 2012-2017 Matthias Saou http://matthias.saou.eu/
