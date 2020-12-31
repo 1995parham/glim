@@ -47,7 +47,7 @@ The supported `boot/iso/` sub-directories (in alphabetical order) are :
 ```
 antergos
 antix
-arch
+* arch
 bodhi
 centos
 clonezilla
@@ -58,17 +58,17 @@ gparted
 grml
 ipxe
 kali
-linuxmint
-manjaro
+* linuxmint
+* manjaro
 netrunner
 peppermint
 porteus
 rhel
 sabayon
 supergrub2disk
-sysrescd
+* sysrescd
 tails
-ubuntu
+* ubuntu
 void
 xubuntu
 ```
